@@ -1,6 +1,5 @@
 import { timestamp2Date } from '../src';
 
-
 describe('timestamp2Date', () => {
   it('should format timestamp to default format', () => {
     const timestamp = 1687267792619;
@@ -49,4 +48,3 @@ describe('timestamp2Date', () => {
     expect(formattedDate).toBeUndefined();
   });
 });
-
