@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 export default defineConfig({
+  base: '/one-utils',
   title: 'one-utils',
   description: '一个js工具库',
   lang: 'zh-CN',
