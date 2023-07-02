@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.9e78349a.js";const C=JSON.parse('{"title":"时间处理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/time.md","filePath":"guide/time.md"}'),o={name:"guide/time.md"},t=l("",3),p=[t];function e(c,r,D,i,y,F){return a(),n("div",null,p)}const m=s(o,[["render",e]]);export{C as __pageData,m as default};
