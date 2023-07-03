@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,O as l}from"./chunks/framework.9e78349a.js";const i=JSON.parse('{"title":"图片处理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/image.md","filePath":"guide/image.md"}'),o={name:"guide/image.md"},p=l("",5),e=[p];function t(c,r,D,y,F,C){return a(),n("div",null,e)}const d=s(o,[["render",t]]);export{i as __pageData,d as default};
