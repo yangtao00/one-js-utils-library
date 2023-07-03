@@ -18,15 +18,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,md}": [
-      "eslint --fix .",
-      "prettier --write ."
-    ],
-    "docs/**/*.{ts,md}": [
+    "**/*.{ts,md}": [
       "eslint --fix .",
       "prettier --write ."
     ]
@@ -39,9 +36,13 @@
   "author": "yangtao00",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@types/jest": "^29.5.2",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.1",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
@@ -56,5 +57,10 @@
   },
   "dependencies": {
     "dayjs": "^1.11.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
