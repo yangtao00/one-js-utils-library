@@ -24,10 +24,6 @@
     "src/**/*.{ts,md}": [
       "eslint --fix",
       "prettier --write"
-    ],
-    "docs/**/*.{ts,md}": [
-      "eslint --fix",
-      "prettier --write"
     ]
   },
   "homepage": "https://yangtao00.github.io/one-utils",
