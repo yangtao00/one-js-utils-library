@@ -13,6 +13,5 @@ export const filterObjectValues = <T>(obj: T): ObjectWithValues<T> => {
       }
     }
   }
-
   return filtered as ObjectWithValues<T>;
 };

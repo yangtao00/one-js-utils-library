@@ -13,7 +13,8 @@
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "lint": "eslint .",
-    "fix": "eslint . --fix"
+    "fix": "eslint --fix .",
+    "prettier": "prettier --write ."
   },
   "husky": {
     "hooks": {
@@ -22,12 +23,12 @@
   },
   "lint-staged": {
     "src/**/*.{ts,md}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix .",
+      "prettier --write ."
     ],
     "docs/**/*.{ts,md}": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix .",
+      "prettier --write ."
     ]
   },
   "homepage": "https://yangtao00.github.io/one-utils",
@@ -50,7 +51,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "ts-jest": "^29.1.0",
-    "typescript": "^5.1.3",
+    "typescript": "5.0.4",
     "vitepress": "1.0.0-beta.3"
   },
   "dependencies": {

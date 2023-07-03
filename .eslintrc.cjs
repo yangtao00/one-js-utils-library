@@ -24,5 +24,7 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'],
     semi: ['warn', 'always'],
+    'no-console': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
   },
 };
