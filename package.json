@@ -18,13 +18,14 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "**/*.{ts,md}": [
-      "eslint --fix .",
-      "prettier --write ."
+    "**/*.{ts,js,md}": [
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "homepage": "https://yangtao00.github.io/one-utils",
