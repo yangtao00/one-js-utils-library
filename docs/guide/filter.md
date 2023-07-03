@@ -2,7 +2,9 @@
 
 ## 过滤对象中的`null`, `undefined`, `''`
 
-```ts
+::: code-group
+
+```ts [demo]
 import { filterObjectValues } from 'one-utils';
 const obj = {
   id: 1,
@@ -29,3 +31,26 @@ const obj2 = {
 filterObjectValues(obj2);
 // 输出 {}
 ```
+
+```ts [code]
+type ObjectWithValues<T> = {
+  [K in keyof T]: T[K];
+};
+
+export const filterObjectValues = <T>(obj: T): ObjectWithValues<T> => {
+  const filtered: Partial<ObjectWithValues<T>> = {};
+
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const value = obj[key];
+      if (value !== null && value !== undefined && value !== '') {
+        filtered[key] = value;
+      }
+    }
+  }
+
+  return filtered as ObjectWithValues<T>;
+};
+```
+
+:::

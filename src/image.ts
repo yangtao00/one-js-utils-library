@@ -8,17 +8,16 @@ export const validateImageType = (
 };
 
 // 判断图片资源大小验证
-enum Unit {
-  'kb' = 1024,
-  'mb' = 1024 * 1024,
-  'gb' = 1024 * 1024 * 1024,
-}
-
 export const validateImageSize = (
   size: number,
   limit: number,
   unit: 'kb' | 'mb' | 'gb' = 'kb',
 ) => {
+  const Unit = {
+    kb: 1024,
+    mb: 1024 * 1024,
+    gb: 1024 * 1024 * 1024,
+  };
   const sizeF = size / Unit[unit];
   return limit >= sizeF;
 };
