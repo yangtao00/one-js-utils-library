@@ -5,7 +5,7 @@
 ::: code-group
 
 ```ts [demo]
-import { validateImageType } from 'one-utils';
+import { validateImageType } from 'one-js-utils-library';
 
 validateImageType('image/png', ['png', 'jpg', 'jpeg']); // true
 validateImageType('image/gif', ['png', 'jpg', 'jpeg']); // false
@@ -29,7 +29,7 @@ export const validateImageType = (
 ::: code-group
 
 ```ts [demo]
-import { validateImageSize } from 'one-utils';
+import { validateImageSize } from 'one-js-utils-library';
 
 validateImageSize(1024, 1, 'kb'); // true
 validateImageSize(2048, 1, 'kb'); // false

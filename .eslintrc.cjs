@@ -26,5 +26,7 @@ module.exports = {
     semi: ['warn', 'always'],
     'no-console': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
+    'prefer-const': 'error',
+    eqeqeq: 'error',
   },
 };

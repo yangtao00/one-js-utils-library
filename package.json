@@ -1,37 +1,37 @@
 {
-  "name": "one-utils",
+  "name": "one-js-utils-library",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/bundle.esm.js",
+  "module": "dist/bundle.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "build": "npx rollup -c",
     "test": "jest",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
-    "lint": "eslint .",
     "fix": "eslint --fix .",
-    "prettier": "prettier --write ."
+    "format": "prettier --write ."
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
-  },
+  "files": [
+    "dist"
+  ],
   "lint-staged": {
-    "*.{ts,js,md}": [
+    "*.ts,.md": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "*.test.ts": [
+      "jest --passWithNoTests"
     ]
   },
-  "homepage": "https://yangtao00.github.io/one-utils",
+  "homepage": "https://yangtao00.github.io/one-js-utils-library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangtao00/one-utils"
+    "url": "git+https://github.com/yangtao00/one-js-utils-library"
   },
   "author": "yangtao00",
   "license": "MIT",

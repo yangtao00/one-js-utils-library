@@ -5,7 +5,7 @@
 ::: code-group
 
 ```ts [demo]
-import { validatePhone } from 'one-utils';
+import { validatePhone } from 'one-js-utils-library';
 
 validatePhone('12345678901'); // true
 validatePhone('1234567890'); // false

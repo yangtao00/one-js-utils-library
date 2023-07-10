@@ -1,14 +1,17 @@
 import { defineConfig } from 'vitepress';
 export default defineConfig({
-  base: '/one-utils',
-  title: 'one-utils',
+  base: '/one-js-utils-library',
+  title: 'one-js-utils-library',
   description: '一个js工具库',
   lang: 'zh-CN',
   themeConfig: {
-    siteTitle: 'one-utils',
+    siteTitle: 'one-js-utils-library',
     logo: '',
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yangtao00/one-utils' },
+      {
+        icon: 'github',
+        link: 'https://github.com/yangtao00/one-js-utils-library',
+      },
     ],
     nav: [{ text: '指南', link: '/guide/getting-started' }],
     sidebar: {
@@ -26,12 +29,16 @@ export default defineConfig({
           link: '/guide/filter',
         },
         {
-          text: '时间处理',
+          text: '时间',
           link: '/guide/time',
         },
         {
-          text: '图片处理',
+          text: '图片',
           link: '/guide/image',
+        },
+        {
+          text: 'url',
+          link: '/guide/url',
         },
       ],
     },
