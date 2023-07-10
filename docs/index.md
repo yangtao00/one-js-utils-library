@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: one-uitls
+title: one-js-utils-library
 titleTemplate: 一个js工具库
 
 hero:
-  name: one-utils
+  name: one-js-utils-library
   text: 一个js工具库
   tagline: ''
   image:
@@ -17,7 +17,7 @@ hero:
       link: /guide/getting-started
     - theme: alt
       text: 在 github 上查看
-      link: https://github.com/yangtao00/one-utils
+      link: https://github.com/yangtao00/one-js-utils-library
 
 features:
   - icon: 💡

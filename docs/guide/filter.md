@@ -5,7 +5,7 @@
 ::: code-group
 
 ```ts [demo]
-import { filterObjectValues } from 'one-utils';
+import { filterObjectValues } from 'one-js-utils-library';
 const obj = {
   id: 1,
   name: 'John',

@@ -1,9 +1,9 @@
 {
-  "name": "one-utils",
+  "name": "one-js-utils-library",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/bundle.esm.js",
+  "module": "dist/bundle.esm.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
@@ -16,6 +16,9 @@
     "fix": "eslint --fix .",
     "format": "prettier --write ."
   },
+  "files": [
+    "dist"
+  ],
   "lint-staged": {
     "*.ts,.md": [
       "eslint --fix",
@@ -25,10 +28,10 @@
       "jest --passWithNoTests"
     ]
   },
-  "homepage": "https://yangtao00.github.io/one-utils",
+  "homepage": "https://yangtao00.github.io/one-js-utils-library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangtao00/one-utils"
+    "url": "git+https://github.com/yangtao00/one-js-utils-library"
   },
   "author": "yangtao00",
   "license": "MIT",
