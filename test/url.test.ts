@@ -1,4 +1,4 @@
-import { urlSearch2Object, object2UrlSearch } from '../src'; // 导入你的模块
+import { urlSearch2Object, object2UrlSearch, http2https } from '../src'; // 导入你的模块
 
 // url search 转化为对象
 describe('urlSearch2Object', () => {
@@ -48,6 +48,32 @@ describe('object2UrlSearch', () => {
     };
     expect(object2UrlSearch(params)).toBe(
       'param1=hello%20world&param2=%40openai&param3=%241234!',
+    );
+  });
+});
+
+describe('http2https', () => {
+  test('convert HTTP URL to HTTPS', () => {
+    expect(http2https('http://example.com')).toBe('https://example.com');
+    expect(http2https('http://www.google.com')).toBe('https://www.google.com');
+    expect(http2https('http://sub.domain.com/path')).toBe(
+      'https://sub.domain.com/path',
+    );
+  });
+
+  test('keep HTTPS URL unchanged', () => {
+    expect(http2https('https://example.com')).toBe('https://example.com');
+    expect(http2https('https://www.google.com')).toBe('https://www.google.com');
+    expect(http2https('https://sub.domain.com/path')).toBe(
+      'https://sub.domain.com/path',
+    );
+  });
+
+  test('do not convert other protocols', () => {
+    expect(http2https('ftp://example.com')).toBe('ftp://example.com');
+    expect(http2https('ws://www.google.com')).toBe('ws://www.google.com');
+    expect(http2https('ftp://sub.domain.com/path')).toBe(
+      'ftp://sub.domain.com/path',
     );
   });
 });

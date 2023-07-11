@@ -40,6 +40,10 @@ export default defineConfig({
           text: 'url',
           link: '/guide/url',
         },
+        {
+          text: '金额',
+          link: '/guide/amount',
+        },
       ],
     },
   },

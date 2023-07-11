@@ -1,5 +1,6 @@
-import { validatePhone } from '../src';
+import { validatePhone, validateEmail } from '../src';
 
+// 验证手机号
 describe('validatePhone', () => {
   it('should return true for valid phone number', () => {
     const phoneNumber = '13812345678';
@@ -29,5 +30,21 @@ describe('validatePhone', () => {
     const phoneNumber = '23812345678';
     const isValid = validatePhone(phoneNumber);
     expect(isValid).toBe(false);
+  });
+});
+
+// 验证邮箱
+describe('validateEmail', () => {
+  test('valid email', () => {
+    expect(validateEmail('example@example.com')).toBe(true);
+    expect(validateEmail('john.doe@example.co.uk')).toBe(true);
+    expect(validateEmail('jane+smith@example.net')).toBe(true);
+  });
+
+  test('invalid email', () => {
+    expect(validateEmail('invalid')).toBe(false);
+    expect(validateEmail('user@example')).toBe(false);
+    expect(validateEmail('test@.com')).toBe(false);
+    expect(validateEmail('test@example..com')).toBe(false);
   });
 });
