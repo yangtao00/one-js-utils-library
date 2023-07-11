@@ -1,4 +1,4 @@
-export function urlSearch2Object(url: string): Record<string, string> {
+export const urlSearch2Object = (url: string): Record<string, string> => {
   const params: Record<string, string> = {};
 
   let queryString = url.split('?')[1];
@@ -13,9 +13,9 @@ export function urlSearch2Object(url: string): Record<string, string> {
   }
 
   return params;
-}
+};
 
-export function object2UrlSearch(params: Record<string, string>): string {
+export const object2UrlSearch = (params: Record<string, string>) => {
   const paramPairs: string[] = [];
   const hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -27,4 +27,9 @@ export function object2UrlSearch(params: Record<string, string>): string {
   }
 
   return paramPairs.join('&');
-}
+};
+
+export const http2https = (url: string) => {
+  const httpsUrl = url.replace(/^http:/i, 'https:');
+  return httpsUrl;
+};

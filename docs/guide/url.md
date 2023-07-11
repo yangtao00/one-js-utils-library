@@ -26,7 +26,7 @@ urlSearch2Object(url4); // { param1: 'value3' }
 ```
 
 ```ts [code]
-function urlSearch2Object(url: string): Record<string, string> {
+const urlSearch2Object = (url: string): Record<string, string> => {
   const params: Record<string, string> = {};
 
   let queryString = url.split('?')[1];
@@ -41,7 +41,7 @@ function urlSearch2Object(url: string): Record<string, string> {
   }
 
   return params;
-}
+};
 ```
 
 :::
@@ -62,7 +62,7 @@ object2UrlSearch(params); // param1=hello%20world&param2=%40openai&param3=%24123
 ```
 
 ```ts [code]
-function object2UrlSearch(params: Record<string, string>): string {
+const object2UrlSearch = (params: Record<string, string>) => {
   const paramPairs: string[] = [];
   const hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -74,7 +74,28 @@ function object2UrlSearch(params: Record<string, string>): string {
   }
 
   return paramPairs.join('&');
-}
+};
+```
+
+:::
+
+## http 转化为 https
+
+::: code-group
+
+```ts [demo]
+import { http2https } from 'one-js-utils-library';
+
+http2https('http://example.com'); // https://example.com
+http2https('https://example.com'); // https://example.com
+http2https('ftp://example.com'); // ftp://example.com
+```
+
+```ts [code]
+const http2https = (url: string) => {
+  const httpsUrl = url.replace(/^http:/i, 'https:');
+  return httpsUrl;
+};
 ```
 
 :::
