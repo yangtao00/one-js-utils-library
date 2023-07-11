@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.67ae5de5.js";const A=JSON.parse('{"title":"金额处理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/amount.md","filePath":"guide/amount.md"}'),o={name:"guide/amount.md"},p=l("",5),t=[p];function e(c,r,y,F,D,C){return a(),n("div",null,t)}const d=s(o,[["render",e]]);export{A as __pageData,d as default};
