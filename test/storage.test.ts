@@ -23,8 +23,8 @@ describe('StorageManager', () => {
     storageManager.setItem('favoriteBooks', {
       genre: 'Sci-Fi',
     });
-    storageManager.pushValue('favoriteFruits', 'banana');
-    storageManager.pushValue('favoriteBooks', {
+    storageManager.appendItemValue('favoriteFruits', 'banana');
+    storageManager.appendItemValue('favoriteBooks', {
       title: 'Dune',
     });
 
@@ -37,9 +37,9 @@ describe('StorageManager', () => {
 
   it('should remove a value from an existing array or object in storage', () => {
     storageManager.setItem('favoriteFruits', ['apple']);
-    storageManager.pushValue('favoriteFruits', 'banana');
+    storageManager.appendItemValue('favoriteFruits', 'banana');
 
-    storageManager.removeValue('favoriteFruits', 'apple');
+    storageManager.removeItemValue('favoriteFruits', 'apple');
     const favoriteFruits = storageManager.getItem('favoriteFruits');
 
     expect(favoriteFruits).toEqual(['banana']);

@@ -17,8 +17,8 @@ storageManager.setItem('favoriteFruits', ['apple']);
 storageManager.setItem('favoriteBooks', {
   genre: 'Sci-Fi',
 });
-storageManager.pushValue('favoriteFruits', 'banana');
-storageManager.pushValue('favoriteBooks', {
+storageManager.appendItemValue('favoriteFruits', 'banana');
+storageManager.appendItemValue('favoriteBooks', {
   title: 'Dune',
 });
 storageManager.getItem('favoriteFruits'); // ['apple', 'banana']
@@ -26,9 +26,9 @@ storageManager.getItem('favoriteBooks'); // { genre: 'Sci-Fi', title: 'Dune' }
 
 // 删除某一个
 storageManager.setItem('favoriteFruits', ['apple']);
-storageManager.pushValue('favoriteFruits', 'banana');
+storageManager.appendItemValue('favoriteFruits', 'banana');
 
-storageManager.removeValue('favoriteFruits', 'apple');
+storageManager.removeItemValue('favoriteFruits', 'apple');
 storageManager.getItem('favoriteFruits'); // ['banana']
 
 // 删除某一项
@@ -94,7 +94,7 @@ export class StorageManager {
     this.storage.removeItem(key);
   }
 
-  pushValue(key: string, value: any): void {
+  appendItemValue(key: string, value: any): void {
     if (!this.validateKey(key)) {
       console.error('Invalid key provided.');
       return;
@@ -118,7 +118,7 @@ export class StorageManager {
     }
   }
 
-  removeValue(key: string, value: any): void {
+  removeItemValue(key: string, value: any): void {
     if (!this.validateKey(key)) {
       console.error('Invalid key provided.');
       return;

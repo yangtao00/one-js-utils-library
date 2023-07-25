@@ -53,7 +53,7 @@ export class StorageManager {
     this.storage.removeItem(key);
   }
 
-  pushValue(key: string, value: any): void {
+  appendItemValue(key: string, value: any): void {
     if (!this.validateKey(key)) {
       console.error('Invalid key provided.');
       return;
@@ -77,7 +77,7 @@ export class StorageManager {
     }
   }
 
-  removeValue(key: string, value: any): void {
+  removeItemValue(key: string, value: any): void {
     if (!this.validateKey(key)) {
       console.error('Invalid key provided.');
       return;
