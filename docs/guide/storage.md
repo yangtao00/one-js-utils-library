@@ -6,7 +6,7 @@
 import { StorageManager, StorageType } from 'one-js-utils-library';
 
 const storageType: StorageType = 'localStorage';
-const storageManager: StorageManager; = new StorageManager(storageType);
+const storageManager: StorageManager = new StorageManager(storageType);
 
 // 新增
 storageManager.setItem('name', 'John Doe');
