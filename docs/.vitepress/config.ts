@@ -44,6 +44,14 @@ export default defineConfig({
           text: '金额',
           link: '/guide/amount',
         },
+        {
+          text: '字符串处理',
+          link: '/guide/string',
+        },
+        {
+          text: 'storage',
+          link: '/guide/storage',
+        },
       ],
     },
   },
