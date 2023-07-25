@@ -24,7 +24,7 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'],
     semi: ['warn', 'always'],
-    'no-console': 'warn',
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
     '@typescript-eslint/no-unused-vars': 'warn',
     'prefer-const': 'error',
     eqeqeq: 'error',
