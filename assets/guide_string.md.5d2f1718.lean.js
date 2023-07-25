@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.67ae5de5.js";const A=JSON.parse('{"title":"字符串处理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/string.md","filePath":"guide/string.md"}'),o={name:"guide/string.md"},p=l("",5),t=[p];function e(c,r,y,D,F,C){return a(),n("div",null,t)}const d=s(o,[["render",e]]);export{A as __pageData,d as default};

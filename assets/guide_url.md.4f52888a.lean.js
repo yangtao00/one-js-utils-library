@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,O as l}from"./chunks/framework.67ae5de5.js";const A=JSON.parse('{"title":"url 处理","description":"","frontmatter":{},"headers":[],"relativePath":"guide/url.md","filePath":"guide/url.md"}'),p={name:"guide/url.md"},o=l("",7),t=[o];function e(c,r,y,F,D,C){return a(),n("div",null,t)}const u=s(p,[["render",e]]);export{A as __pageData,u as default};
