@@ -52,6 +52,14 @@ export default defineConfig({
           text: 'storage',
           link: '/guide/storage',
         },
+        {
+          text: '比较',
+          link: '/guide/compare',
+        },
+        {
+          text: 'request',
+          link: '/guide/request',
+        },
       ],
     },
   },

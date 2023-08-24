@@ -25,8 +25,7 @@ export class StorageManager {
     try {
       return item ? JSON.parse(item) : null;
     } catch (error) {
-      console.error('Error parsing stored data:', error);
-      return null;
+      return item;
     }
   }
 

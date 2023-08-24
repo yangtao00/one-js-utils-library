@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "build": "npx rollup -c",
     "test": "jest",
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --port 8080",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs",
     "fix": "eslint --fix .",
