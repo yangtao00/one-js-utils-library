@@ -5,16 +5,16 @@
 ::: code-group
 
 ```ts [demo]
-import { urlSearch2Object } from 'one-js-utils-library';
+import { getUrlSearch } from 'one-js-utils-library';
 
 const url1 = 'https://example.com';
-urlSearch2Object(url1); // {}
+getUrlSearch(url1); // {}
 
 const url2 = 'https://example.com?param1=value1';
-urlSearch2Object(url2); // { param1: 'value1' }
+getUrlSearch(url2); // { param1: 'value1' }
 
 const url3 = 'https://example.com?param1=value1&param2=value2&param3=value3';
-urlSearch2Object(url3);
+getUrlSearch(url3);
 // {
 //   param1: 'value1',
 //   param2: 'value2',
@@ -22,15 +22,16 @@ urlSearch2Object(url3);
 // };
 
 const url4 = 'https://example.com?param1=value1&param1=value2&param1=value3';
-urlSearch2Object(url4); // { param1: 'value3' }
+getUrlSearch(url4); // { param1: 'value3' }
 ```
 
 ```ts [code]
-const urlSearch2Object = (url: string): Record<string, string> => {
+const getUrlSearch = (): Record<string, string> => {
   const params: Record<string, string> = {};
 
-  let queryString = url.split('?')[1];
+  let queryString = window.location.search.substring(1);
   queryString = decodeURIComponent(queryString);
+
   if (queryString) {
     const paramPairs = queryString.split('&');
 

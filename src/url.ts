@@ -1,8 +1,9 @@
-export const urlSearch2Object = (url: string): Record<string, string> => {
+export const getUrlSearch = (): Record<string, string> => {
   const params: Record<string, string> = {};
 
-  let queryString = url.split('?')[1];
+  let queryString = window.location.search.substring(1);
   queryString = decodeURIComponent(queryString);
+
   if (queryString) {
     const paramPairs = queryString.split('&');
 

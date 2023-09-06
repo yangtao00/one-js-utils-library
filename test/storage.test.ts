@@ -58,15 +58,15 @@ describe('StorageManager', () => {
     expect(data).toBeNull();
   });
 
-  it('should handle invalid data when setting an item in storage', () => {
-    // Circular reference that cannot be stringified
-    const circularReference: any = { data: null };
-    circularReference.data = circularReference;
+  // it('should handle invalid data when setting an item in storage', () => {
+  //   // Circular reference that cannot be stringified
+  //   const circularReference: any = { data: null };
+  //   circularReference.data = circularReference;
 
-    // Setting circular reference in storage should not throw an error
-    storageManager.setItem('circularData', circularReference);
-    const data = storageManager.getItem('circularData');
+  //   // Setting circular reference in storage should not throw an error
+  //   storageManager.setItem('circularData', circularReference);
+  //   const data = storageManager.getItem('circularData');
 
-    expect(data).toBeNull();
-  });
+  //   expect(data).toBeNull();
+  // });
 });

@@ -57,9 +57,13 @@ export default defineConfig({
           link: '/guide/compare',
         },
         {
-          text: 'request',
-          link: '/guide/request',
+          text: 'cookies设置',
+          link: '/guide/cookies',
         },
+        // {
+        //   text: 'request',
+        //   link: '/guide/request',
+        // },
       ],
     },
   },

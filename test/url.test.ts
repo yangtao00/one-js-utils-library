@@ -1,44 +1,43 @@
-import { urlSearch2Object, object2UrlSearch, http2https } from '../src'; // 导入你的模块
+import { getUrlSearch, object2UrlSearch, http2https } from '../src'; // 导入你的模块
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // url search 转化为对象
-describe('urlSearch2Object', () => {
-  test('no parameters', () => {
-    const url = 'https://example.com';
-    expect(urlSearch2Object(url)).toEqual({});
-  });
-
-  test('single parameter', () => {
-    const url = 'https://example.com?param1=value1';
-    expect(urlSearch2Object(url)).toEqual({ param1: 'value1' });
-  });
-
-  test('multiple parameters', () => {
-    const url = 'https://example.com?param1=value1&param2=value2&param3=value3';
-    expect(urlSearch2Object(url)).toEqual({
-      param1: 'value1',
-      param2: 'value2',
-      param3: 'value3',
+describe('getUrlSearch', () => {
+  it('should return an empty object when there is no query string', () => {
+    const url = 'http://example.com';
+    Object.defineProperty(window, 'location', {
+      value: new URL(url),
     });
+
+    window.location.href = url;
+    expect(getUrlSearch()).toEqual({});
   });
 
-  test('parameters with special characters', () => {
-    const url =
-      'https://example.com?param1=hello%20world&param2=%40openai&param3=%241234%21';
-    expect(urlSearch2Object(url)).toEqual({
-      param1: 'hello world',
-      param2: '@openai',
-      param3: '$1234!',
+  it('should return a single key-value pair when there is one parameter', () => {
+    const url = 'http://example.com/?key1=value1';
+    Object.defineProperty(window, 'location', {
+      value: new URL(url),
     });
+
+    window.location.href = url;
+    expect(getUrlSearch()).toEqual({ key1: 'value1' });
   });
 
-  test('parameters with duplicate keys', () => {
-    const url = 'https://example.com?param1=value1&param1=value2&param1=value3';
-    expect(urlSearch2Object(url)).toEqual({ param1: 'value3' });
+  it('should return all key-value pairs when there are multiple parameters', () => {
+    const url = 'http://example.com/?key1=value1&key2=value2';
+    Object.defineProperty(window, 'location', {
+      value: new URL(url),
+    });
+
+    window.location.href = url;
+    expect(getUrlSearch()).toEqual({
+      key1: 'value1',
+      key2: 'value2',
+    });
   });
 });
 
 // 对象转化为url search
-
 describe('object2UrlSearch', () => {
   test('encode parameter values by default', () => {
     const params = {

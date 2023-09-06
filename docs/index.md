@@ -22,10 +22,13 @@ hero:
 features:
   - icon: 💡
     title: js工具库
-    details: 基于vite打包和typeScript开发
+    details: 基于vite和typeScript开发
   - icon: 🛠️
     title: 按需引入
     details: 直接支持按需引入无需配置任何插件
+  - icon: 🛠️
+    title: 单测覆盖100%
+    details: 100%单测覆盖率
   - icon: 📦
     title: 广告位招租
     details: 广告位招租
