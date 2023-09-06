@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,O as l}from"./chunks/framework.67ae5de5.js";const i=JSON.parse('{"title":"版本对比","description":"","frontmatter":{},"headers":[],"relativePath":"guide/compare.md","filePath":"guide/compare.md"}'),o={name:"guide/compare.md"},p=l("",3),e=[p];function t(c,r,y,F,D,C){return n(),a("div",null,e)}const d=s(o,[["render",t]]);export{i as __pageData,d as default};
